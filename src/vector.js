@@ -21,6 +21,11 @@ Sylvester.Vector.Zero = function(n) {
 Sylvester.Vector.prototype = {
   e: function(i) {
     return (i < 1 || i > this.elements.length) ? null : this.elements[i-1];
+},
+  
+  set_e: function (i,value) {
+      this.elements[i - 1] = value;
+      return this;
   },
 
   dimensions: function() {
